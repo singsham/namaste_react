@@ -9,15 +9,15 @@ const RestaurantMenu = () => {
   console.log("first", routParams);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      console.log("inside setinterval use effect");
-    }, 1000);
+    // const interval = setInterval(() => {
+    //   console.log("inside setinterval use effect");
+    // }, 1000);
 
-    return () => {
-      clearInterval(interval);
-      console.log("get called after will unmount");
-    };
-    // fetchRestaurantMenu();
+    // return () => {
+    //   clearInterval(interval);
+    //   console.log("get called similar to will unmount");
+    // };
+    fetchRestaurantMenu();
   }, []);
 
   const fetchRestaurantMenu = async () => {
