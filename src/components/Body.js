@@ -1,8 +1,9 @@
-import ResturentCard from "./ResturentCard";
+import RestaurantCard from "./RestaurantCard";
 
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_API_URL } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [resList, setResList] = useState([]);
@@ -50,7 +51,7 @@ const Body = () => {
             setFilteredResList(resList);
           }}
         >
-          All Resturent
+          All Restaurant
         </button>
         <button
           className="filter-btn"
@@ -59,12 +60,14 @@ const Body = () => {
             setFilteredResList(tempResList);
           }}
         >
-          Filter Top Rated Resturent
+          Filter Top Rated Restaurant
         </button>
       </div>
       <div className="res-container">
         {filteredResList.map((res) => (
-          <ResturentCard key={res.info.id} resData={res.info} />
+          <Link to={"/restaurants/" + res.info.id} key={res.info.id} className="res-card-link">
+            <RestaurantCard resData={res.info} />
+          </Link>
         ))}
       </div>
     </div>
