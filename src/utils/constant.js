@@ -5,6 +5,6 @@ const SWIGGY_API_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.850122&lng=77.671346&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 const MENU_URL =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.850122&lng=77.671346&restaurantId=";
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.850122&lng=77.671346&catalog_qa=undefined&submitAction=ENTER&restaurantId=";
 
 export { LOGO_URL, CDN_URL, SWIGGY_API_URL, MENU_URL };
